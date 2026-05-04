@@ -1,0 +1,14 @@
+[package]
+name = "password_strength_meter"
+version = "0.1.0"
+edition = "2024"
+
+[features]
+default = ["wasm-export"]
+wasm-export = ["dep:wasm-bindgen"]
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+wasm-bindgen = { version = "0.2.100", optional = true }

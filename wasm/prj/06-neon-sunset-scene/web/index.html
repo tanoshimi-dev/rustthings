@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Neon sunset wasm scene</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="viewer-card">
+        <div class="viewer-copy">
+          <p class="eyebrow">Rust + wasm + SVG</p>
+          <h1>Neon sunset scene</h1>
+          <p class="intro">
+            This demo asks Rust wasm to redraw an animated synthwave-inspired scene in the browser.
+          </p>
+        </div>
+
+        <div id="scene-frame" class="scene-frame" aria-live="polite"></div>
+
+        <div class="controls">
+          <label>
+            Theme
+            <select id="theme">
+              <option value="sunset">Sunset</option>
+              <option value="aurora">Aurora</option>
+              <option value="candy">Candy</option>
+            </select>
+          </label>
+
+          <label>
+            Motion
+            <input id="motion" type="range" min="0" max="2" step="0.05" value="1" />
+            <span id="motion-value">1.00</span>
+          </label>
+
+          <button id="toggle" type="button">Pause</button>
+        </div>
+
+        <p id="theme-note" class="theme-note"></p>
+        <p id="status" class="status">Loading wasm...</p>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

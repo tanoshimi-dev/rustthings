@@ -1,0 +1,11 @@
+[package]
+name = "password_strength_web_page"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+password_strength_meter = { path = "../03-password-strength-meter", default-features = false }
+wasm-bindgen = "0.2.100"

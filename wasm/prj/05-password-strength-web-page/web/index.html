@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Password strength wasm demo</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="card">
+      <h1>Password strength wasm demo</h1>
+      <p class="intro">
+        Type a password and the Rust wasm module will score it in the browser.
+      </p>
+
+      <label for="password">Password</label>
+      <input id="password" type="password" placeholder="Try WasmReady#2026" />
+
+      <div class="status-row">
+        <p id="status" class="status">Loading wasm...</p>
+      </div>
+
+      <dl class="results">
+        <div>
+          <dt>Score</dt>
+          <dd id="score">-</dd>
+        </div>
+        <div>
+          <dt>Label</dt>
+          <dd id="label">-</dd>
+        </div>
+        <div>
+          <dt>Feedback</dt>
+          <dd id="feedback">-</dd>
+        </div>
+      </dl>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

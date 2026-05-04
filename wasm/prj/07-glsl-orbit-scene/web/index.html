@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GLSL orbit wasm scene</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="viewer-card">
+        <div class="viewer-copy">
+          <p class="eyebrow">Rust + wasm + WebGL2</p>
+          <h1>GLSL orbit scene</h1>
+          <p class="intro">
+            This demo uses Rust wasm to drive a fullscreen GLSL shader that renders a small 3D scene in the browser.
+          </p>
+        </div>
+
+        <canvas id="gl-canvas" class="scene-frame" aria-label="Animated GLSL orbit scene"></canvas>
+
+        <div class="controls">
+          <label>
+            Theme
+            <select id="theme">
+              <option value="synthwave">Synthwave</option>
+              <option value="ember">Ember</option>
+              <option value="glacier">Glacier</option>
+            </select>
+          </label>
+
+          <label>
+            Intensity
+            <input id="intensity" type="range" min="0" max="2" step="0.05" value="1" />
+            <span id="intensity-value">1.00</span>
+          </label>
+
+          <button id="toggle" type="button">Pause</button>
+        </div>
+
+        <p id="theme-note" class="theme-note"></p>
+        <p id="status" class="status">Loading wasm...</p>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

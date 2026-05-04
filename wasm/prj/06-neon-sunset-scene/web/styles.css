@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #f7ecff;
+  background:
+    radial-gradient(circle at top, rgba(233, 133, 255, 0.28), transparent 34%),
+    linear-gradient(180deg, #08020f 0%, #140321 48%, #06010c 100%);
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.viewer-card {
+  width: min(100%, 1100px);
+  padding: 24px;
+  border-radius: 24px;
+  background: rgba(16, 6, 25, 0.88);
+  border: 1px solid rgba(255, 144, 248, 0.22);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+.viewer-copy {
+  margin-bottom: 18px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  color: #f5a8ff;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+}
+
+.intro {
+  margin: 0;
+  max-width: 60ch;
+  color: #dec8f3;
+  line-height: 1.5;
+}
+
+.scene-frame {
+  margin: 22px 0 18px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #08020f;
+  border: 1px solid rgba(255, 163, 249, 0.2);
+}
+
+.scene-frame svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  align-items: end;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  font-weight: 700;
+}
+
+select,
+input,
+button {
+  width: 100%;
+  font: inherit;
+}
+
+select,
+input[type="range"],
+button {
+  border-radius: 12px;
+}
+
+select,
+button {
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 162, 241, 0.25);
+  background: rgba(29, 10, 42, 0.95);
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(255, 111, 224, 0.16);
+}
+
+#motion-value {
+  font-size: 0.95rem;
+  color: #ffcaef;
+}
+
+.theme-note,
+.status {
+  margin: 16px 0 0;
+}
+
+.theme-note {
+  color: #f6d7ff;
+}
+
+.status {
+  color: #9bf9ff;
+  font-weight: 700;
+}
+
+@media (max-width: 720px) {
+  .viewer-card {
+    padding: 18px;
+  }
+
+  .controls {
+    grid-template-columns: 1fr;
+  }
+}
