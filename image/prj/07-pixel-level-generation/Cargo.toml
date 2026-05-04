@@ -1,0 +1,7 @@
+[package]
+name = "pixel_level_generation"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+image = "0.25.10"

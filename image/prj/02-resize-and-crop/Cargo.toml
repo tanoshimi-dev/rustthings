@@ -1,0 +1,7 @@
+[package]
+name = "resize_and_crop"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+image = "0.25.10"

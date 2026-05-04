@@ -1,0 +1,7 @@
+[package]
+name = "document_and_photo_workflows"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+image = "0.25.10"
